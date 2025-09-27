@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Tareas - Empresa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>📋 Administrador de Tareas</h1>
+</header>
+
+<div class="container">
+  <!-- Formulario de nueva tarea -->
+  <div class="panel">
+    <h2>Nueva Tarea</h2>
+    <form id="formTarea" onsubmit="return false;">
+      <label>Título</label>
+      <input type="text" id="titulo" required>
+
+      <label>Descripción</label>
+      <textarea id="descripcion" required></textarea>
+
+      <label>Fecha límite</label>
+      <input type="date" id="fecha" required>
+
+      <button class="btn-primary" onclick="crearTarea()">Agregar Tarea</button>
+    </form>
+  </div>
+
+  <!-- Lista de tareas -->
+  <div class="panel tareas">
+    <h2>Lista de Tareas</h2>
+    <div id="listaTareas" class="lista-tareas"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
